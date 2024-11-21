@@ -1,0 +1,96 @@
+/* 重置默认样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 设置游戏容器为全屏，并使用 Flexbox 居中内容 */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 全屏高度 */
+    background-color: #f0f0f0;
+}
+
+/* 设置画布的默认尺寸 */
+canvas {
+    width: 50vw; /* 宽度为视口宽度的50% */
+    height: 50vh; /* 高度为视口高度的50% */
+    background-color: #ffffff;
+    border: 2px solid #000;
+    margin-bottom: 20px;
+}
+
+/* 设置按钮样式 */
+#runButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#runButton:hover {
+    background-color: #0056b3;
+}
+#pauseButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #6c757d;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+#pauseButton:hover {
+    background-color: #5a6268;
+}
+
+#resetButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #dc3545;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+#resetButton:hover {
+    background-color: #c82333;
+}
+/* 响应式设计 */
+@media (max-width: 768px) {
+    canvas {
+        width: 80vw;
+        height: 40vh;
+    }
+
+    #runButton {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    canvas {
+        width: 90vw;
+        height: 30vh;
+    }
+
+    #runButton {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
